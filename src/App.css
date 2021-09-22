@@ -1,5 +1,5 @@
 * {
-  background-color: #2f4f4f;
+  /* background-color: #202020; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,5 +7,12 @@
 
 .App {
   text-align: center;
-  color: ivory;
+  background-color: #18191A;
+}
+
+.circleButton {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  text-align: center;
 }

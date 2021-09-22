@@ -1,10 +1,9 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 
 function LostButton() {
     return (
-        <div>
-            <button>LOST</button>
-        </div>
+        <Button size='lg'>LOST</Button>
     )
 }
 

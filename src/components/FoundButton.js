@@ -1,10 +1,9 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 
 function FoundButton() {
     return (
-        <div>
-            <button>FOUND</button>
-        </div>
+        <Button size='lg'>FOUND!</Button>
     )
 }
 

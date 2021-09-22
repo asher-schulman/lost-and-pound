@@ -7,12 +7,13 @@
 
 .App {
   text-align: center;
-  background-color: #18191A;
+  /* background-color: #18191A; */
 }
 
 .circleButton {
-  width: 8em;
-  height: 8em;
+  width: 35vh;
+  height: 35vh;
   border-radius: 50%;
   text-align: center;
+  background-color: #87AEC3;
 }

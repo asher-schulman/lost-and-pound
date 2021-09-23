@@ -1,12 +1,15 @@
 import React from 'react'
-import {Navbar, NavDropdown, Nav, Container} from 'react-bootstrap'
+import {Navbar, NavDropdown, Nav, Container, Image} from 'react-bootstrap'
+import logo from "../FINAL-LOGO.png"
 
 
 function Header() {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="#F6F2E5" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Lost & Pound</Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    <Image className="logoimg" src={logo} rounded />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

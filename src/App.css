@@ -5,15 +5,30 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #F6F2E5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.petType {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .App {
   text-align: center;
-  /* background-color: #18191A; */
+  /* background-color: #F6F2E5; */
 }
 
 .circleButton {
-  width: 35vh;
-  height: 35vh;
+  width: 26vh;
+  height: 26vh;
   border-radius: 50%;
   text-align: center;
-  background-color: #87AEC3;
+  background-color: #EEBBA6;
+}
+
+.logoimg {
+  width: 120px;
 }

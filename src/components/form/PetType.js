@@ -1,10 +1,21 @@
 import React from 'react'
+import {Form, Container, Button} from 'react-bootstrap'
 
-const PetType = () => {
+const PetType = ({nextStep, handleChange, values}) => {
+
+    const Continue = (e) => {
+        e.preventDefault();
+        nextStep();
+    }
+
     return (
-        <div>
-            <h1>Pet type</h1>        
-        </div>
+        <Container>
+            <Form>
+                <Button value='dog' onClick={handleChange('pet_type')}>Dog</Button>
+                <Button value='cat' onClick={handleChange('pet_type')}>Cat</Button>
+                <Button onClick={Continue}>Next</Button>
+            </Form>
+        </Container>
     )
 }
 

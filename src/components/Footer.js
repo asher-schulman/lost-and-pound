@@ -5,7 +5,7 @@ function Footer() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                TEST
+                FOOTER
             </Container>
         </Navbar>
     )

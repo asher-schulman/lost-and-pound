@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import Preface from './Preface'
 import PetType from './PetType'
-import PetNamePic from './PetNamePic'
-import PetZip from './PetZip'
-import PetTraits from './PetTraits'
-import LostDate from './LostDate'
+import PetPic from './PetPic'
+import PetAttributes from './PetAttributes'
+import LostWhenWhere from './LostWhenWhere'
 import ContactInfo from './ContactInfo'
 import Confirmation from './Confirmation'
 import Success from './Success'
@@ -39,8 +39,11 @@ export default class LostForm extends Component {
     }
     // handle field change
     handleChange = input => e => {
-        this.setState({ [input]: e.target.value });
+        this.setState({
+            [input]: e.target.value
+        })
     }
+
     
     render() {
 
@@ -51,7 +54,7 @@ export default class LostForm extends Component {
         switch(step) {
             case 1:
                 return (
-                    <PetType
+                    <Preface
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
                         values={ values }
@@ -59,8 +62,7 @@ export default class LostForm extends Component {
                 )
             case 2:
                 return (
-                    <PetNamePic
-                        prevStep={ this.prevStep }
+                    <PetType
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
                         values={ values }
@@ -68,7 +70,7 @@ export default class LostForm extends Component {
                 )
             case 3:
                 return (
-                    <PetZip
+                    <PetAttributes
                         prevStep={ this.prevStep }
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
@@ -77,7 +79,7 @@ export default class LostForm extends Component {
                 )
             case 4:
                 return (
-                    <PetTraits
+                    <PetPic
                         prevStep={ this.prevStep }
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
@@ -86,7 +88,7 @@ export default class LostForm extends Component {
                 )
             case 5:
                 return (
-                    <LostDate
+                    <PetAttributes
                         prevStep={ this.prevStep }
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
@@ -95,7 +97,7 @@ export default class LostForm extends Component {
                 )
             case 6:
                 return (
-                    <ContactInfo
+                    <LostWhenWhere
                         prevStep={ this.prevStep }
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
@@ -104,7 +106,7 @@ export default class LostForm extends Component {
                 )
             case 7:
                 return (
-                    <Confirmation
+                    <ContactInfo
                         prevStep={ this.prevStep }
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
@@ -113,12 +115,15 @@ export default class LostForm extends Component {
                 )
             case 8:
                 return (
-                    <Success
+                    <Confirmation
                         prevStep={ this.prevStep }
                         nextStep={ this.nextStep }
-                        handleChange={ this.handleChange }
                         values={ values }
                     />
+                )
+            case 9:
+                return (
+                    <Success />
                 )
         }
 

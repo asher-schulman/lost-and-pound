@@ -4,7 +4,7 @@ import { LogoLinkedin } from 'react-ionicons'
 
 function Footer() {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="#F6F2E5" expand="lg">
             <Container className="footer">
                 <div>
                     <ul>

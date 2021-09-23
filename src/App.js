@@ -26,10 +26,10 @@ function App() {
       {
         renderForm === '' ?
         <>
-          <Button className='circleButton m-2' variant="outline-dark" size="lg" onClick={renderTrue}>Lost</Button>
-          <Button className='circleButton m-2' variant="outline-dark" size="lg" onClick={renderFalse}>Found</Button>
+          <Button className='circleButton m-2' variant="outline-dark" size="lg" onClick={renderTrue}>LOST</Button>
+          <Button className='circleButton m-2' variant="outline-dark" size="lg" onClick={renderFalse}>FOUND</Button>
         </>
-          : renderForm ? <LostForm/>
+          : renderForm ? <LostForm />
           : <><SearchBar/> <PetCard/></>
       }
 

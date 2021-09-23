@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, FloatingLabel, Container} from 'react-bootstrap'
+import {Form, FloatingLabel, Container, Button} from 'react-bootstrap'
 
 const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
     return (
@@ -141,10 +141,9 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
 
         }
 
-            <div>
-            <button className='circleButton m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</button>
-            <button className='circleButton m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</button>
-            </div>
+        <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
+        <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>
+
 
         </Container>
 

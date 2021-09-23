@@ -13,7 +13,8 @@ const Preface = ({nextStep}) => {
             <h1>PREFACE</h1>
             <h2>We've got your back with neighbors and fellow pet lovers who can help out.</h2>
 
-            <Button onClick={Continue} className='circleButton m-2' variant="outline-dark" size="lg">Continue</Button>
+            
+            <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>
         </div>
     )
 }

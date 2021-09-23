@@ -7,6 +7,8 @@ import LostWhenWhere from './LostWhenWhere'
 import ContactInfo from './ContactInfo'
 import Confirmation from './Confirmation'
 import Success from './Success'
+import SearchBar from '../SearchBar'
+import PetCard from '../PetCard'
 
 export default class LostForm extends Component {
 
@@ -87,16 +89,8 @@ export default class LostForm extends Component {
                         values={ values }
                     />
                 )
+
             case 5:
-                return (
-                    <PetAttributes
-                        prevStep={ this.prevStep }
-                        nextStep={ this.nextStep }
-                        handleChange={ this.handleChange }
-                        values={ values }
-                    />
-                )
-            case 6:
                 return (
                     <LostWhenWhere
                         prevStep={ this.prevStep }
@@ -105,7 +99,7 @@ export default class LostForm extends Component {
                         values={ values }
                     />
                 )
-            case 7:
+            case 6:
                 return (
                     <ContactInfo
                         prevStep={ this.prevStep }
@@ -114,7 +108,7 @@ export default class LostForm extends Component {
                         values={ values }
                     />
                 )
-            case 8:
+            case 7:
                 return (
                     <Confirmation
                         prevStep={ this.prevStep }
@@ -122,9 +116,20 @@ export default class LostForm extends Component {
                         values={ values }
                     />
                 )
+            case 8:
+                return (
+                    <Success
+                    nextStep={ this.nextStep }
+                    values={ values }
+                    renderFalse = {this.renderFalse}
+                    />
+                )
             case 9:
                 return (
-                    <Success />
+                    <>
+                    <SearchBar/>
+                    <PetCard/>
+                    </>
                 )
         }
 

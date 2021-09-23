@@ -24,15 +24,15 @@ function App() {
       <Header/>
 
       {
-        renderForm === '' ? 
+        renderForm === '' ?
         <>
           <Button className='circleButton m-2' variant="outline-dark" size="lg" onClick={renderTrue}>Lost</Button>
           <Button className='circleButton m-2' variant="outline-dark" size="lg" onClick={renderFalse}>Found</Button>
         </>
-          : renderForm ? <LostForm/> 
+          : renderForm ? <LostForm/>
           : <><SearchBar/> <PetCard/></>
       }
- 
+
       <Footer/>
     </div>
   );

@@ -14,9 +14,7 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
             </FloatingLabel>
             <FloatingLabel controlId="floatingTextarea2" label="Pet name">
             </FloatingLabel>
-            <Form.Text className="text-muted">
-            we're here to help
-            </Form.Text>
+
 
 
               <FloatingLabel controlId="floatingTextarea" label="Coat color" className="mb-3">
@@ -36,6 +34,15 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
                 <option value="green">Green</option>
                 <option value="complete Heterochromia">Complete Heterochromia</option>
                 <option value="segmental Heterochromia">Segmental Heterochromia</option>
+              </Form.Select>
+              </FloatingLabel>
+
+              <FloatingLabel controlId="floatingSelect" label="Age" >
+              <Form.Select aria-label="Floating label select example" onChange={handleChange('age')}>
+                <option> </option>
+                <option value="0">Puppy</option>
+                <option value="1">Adult</option>
+                <option value="2">Senior</option>
               </Form.Select>
               </FloatingLabel>
 
@@ -74,10 +81,6 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
             </FloatingLabel>
             <FloatingLabel controlId="floatingTextarea2" label="Pet name">
             </FloatingLabel>
-            <Form.Text className="text-muted">
-            we're here to help
-            </Form.Text>
-
 
 
               <FloatingLabel controlId="floatingTextarea" label="Coat color" className="mb-3">
@@ -86,6 +89,14 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
               <FloatingLabel controlId="floatingTextarea2" label="Coat color">
               </FloatingLabel>
 
+              <FloatingLabel controlId="floatingSelect" label="Age" >
+              <Form.Select aria-label="Floating label select example" onChange={handleChange('age')}>
+                <option> </option>
+                <option value="0">Kitten</option>
+                <option value="1">Adult</option>
+                <option value="2">Senior</option>
+              </Form.Select>
+              </FloatingLabel>
 
               <FloatingLabel controlId="floatingSelect" label="Eye color" >
               <Form.Select aria-label="Floating label select example" onChange={handleChange('eye_color')}>

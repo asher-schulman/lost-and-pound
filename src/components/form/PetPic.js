@@ -1,9 +1,10 @@
 import React from 'react'
 
-const PetPic = () => {
+const PetPic = ({nextStep, prevStep, handleChange, values}) => {
     return (
         <div>
-            <h1>uploaded lost pet img</h1>
+            <h1>Please upload a clear photo of your {values.pet_type} {values.pet_name}</h1>
+            
         </div>
     )
 }

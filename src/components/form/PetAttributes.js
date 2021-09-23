@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, Container, Button, FloatingLabel} from 'react-bootstrap'
+import {Form, FloatingLabel} from 'react-bootstrap'
 
 const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
     return (

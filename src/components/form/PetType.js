@@ -10,7 +10,7 @@ const PetType = ({nextStep, handleChange, values}) => {
 
     return (
         <Container>
-            <Form>
+            <Form className="petType">
                 <Button className='circleButton m-2' variant="outline-dark" size="lg" value='dog' onClick={handleChange('pet_type')}>Dog</Button>
                 <Button className='circleButton m-2' variant="outline-dark" size="lg" value='cat' onClick={handleChange('pet_type')}>Cat</Button>
                 <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>

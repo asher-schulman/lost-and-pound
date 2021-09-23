@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, FloatingLabel, Container, Button} from 'react-bootstrap'
+import {Container, Button} from 'react-bootstrap'
 
 const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
     return (
@@ -8,7 +8,7 @@ const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
             <ul>
                 <li> Name: {values.pet_name} </li>
                 <li> {values.pet_type} </li>
-                <li><img src={values.picture_url}></img>
+                <li><img alt="lost pet" src={values.picture_url}></img>
                 </li>
                 <li> Zip code: {values.zip_code} </li>
                 <li> Coat color: {values.coat_color} </li>

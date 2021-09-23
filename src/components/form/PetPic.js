@@ -1,10 +1,10 @@
-import {React , useState} from 'react'
+import {React} from 'react'
 import {Form, Container, Button} from 'react-bootstrap'
-import {axios} from 'axios'
+// import {axios} from 'axios'
 
 
 const PetPic = ({nextStep, prevStep, handleChange, values}) => {
-    const [url, setUrl] = useState()
+    // const [url, setUrl] = useState()
     // const [file, setFile] = useState()
     const updateFile = (event) => {
             event.preventDefault();

@@ -1,10 +1,10 @@
 import React from 'react'
-import {Form, FloatingLabel, Container, Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 const Success = ({nextStep, prevStep, handleChange, values, renderFalse}) => {
     // <img src="https://i.imgur.com/yQLDyiR.jpg"></img>
-    const postToAPI = () => {
-        renderFalse();
-    }
+    // const postToAPI = () => {
+    //     renderFalse();
+    // }
 
     return (
         <div>

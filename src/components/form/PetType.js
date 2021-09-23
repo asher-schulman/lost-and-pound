@@ -1,12 +1,7 @@
 import React from 'react'
-import {Form, FloatingLabel, Container, Button} from 'react-bootstrap'
+import {Form, Container, Button} from 'react-bootstrap'
 
 const PetType = ({nextStep, handleChange, values}) => {
-
-    const Continue = (e) => {
-        e.preventDefault();
-        nextStep();
-    }
 
     return (
         <Container>

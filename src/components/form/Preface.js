@@ -3,11 +3,6 @@ import {Button} from 'react-bootstrap'
 
 const Preface = ({nextStep}) => {
 
-    const Continue = (e) => {
-        e.preventDefault();
-        nextStep();
-    }
-
     return (
         <div>
             <h1>PREFACE</h1>

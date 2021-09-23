@@ -1,20 +1,22 @@
 import React from 'react'
-import {Form, FloatingLabel} from 'react-bootstrap'
+import {Form, FloatingLabel, Container} from 'react-bootstrap'
 
 const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
     return (
-        <div>
+        <Container>
         {values.pet_type === "dog" ?
         <Form>
 
-            <Form.Group onChange={handleChange('pet_name')} className="mb-3">
-            <Form.Label>What's your {values.pet_type}'s name?</Form.Label>
-            <Form.Control/>
+
+
+            <FloatingLabel controlId="floatingTextarea" label={`What's your ${values.pet_type}'s name?`} className="mb-3">
+              <Form.Control as="textarea" onChange={handleChange('pet_name')}placeholder="pet name" />
+            </FloatingLabel>
+            <FloatingLabel controlId="floatingTextarea2" label="Pet name">
+            </FloatingLabel>
             <Form.Text className="text-muted">
             we're here to help
             </Form.Text>
-            </Form.Group>
-
 
 
               <FloatingLabel controlId="floatingTextarea" label="Coat color" className="mb-3">
@@ -60,21 +62,21 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
               <FloatingLabel controlId="floatingTextarea" label="Other information" className="mb-3">
                 <Form.Control as="textarea" onChange={handleChange('other_info')}placeholder="Other information" />
               </FloatingLabel>
-              <FloatingLabel controlId="floatingTextarea2" label="Other information">
-              </FloatingLabel>
+
 
 
         </Form> :
 
         <Form>
 
-            <Form.Group onChange={handleChange('pet_name')} className="mb-3">
-            <Form.Label>What's your {values.pet_type}'s name?</Form.Label>
-            <Form.Control/>
+            <FloatingLabel controlId="floatingTextarea" label={`What's your ${values.pet_type}'s name?`} className="mb-3">
+              <Form.Control as="textarea" onChange={handleChange('pet_name')}placeholder="pet name" />
+            </FloatingLabel>
+            <FloatingLabel controlId="floatingTextarea2" label="Pet name">
+            </FloatingLabel>
             <Form.Text className="text-muted">
             we're here to help
             </Form.Text>
-            </Form.Group>
 
 
 
@@ -119,22 +121,21 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
               </FloatingLabel>
 
               <FloatingLabel controlId="floatingTextarea" label="Other information" className="mb-3">
-                <Form.Control as="textarea" onChange={handleChange('other_info')}placeholder="Other information" />
+                <Form.Control as="textarea" onChange={handleChange('other_info')} placeholder="Other information" />
               </FloatingLabel>
-              <FloatingLabel controlId="floatingTextarea2" label="Other information">
-              </FloatingLabel>
+
 
         </Form>
 
 
         }
 
-        <div>
-        <button className='circleButton m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</button>
-        <button className='circleButton m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</button>
-        </div>
+            <div>
+            <button className='circleButton m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</button>
+            <button className='circleButton m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</button>
+            </div>
 
-        </div>
+        </Container>
 
     )
 }

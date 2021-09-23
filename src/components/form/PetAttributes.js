@@ -46,7 +46,6 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
                 <option value="3">Large</option>
                 <option value="4">X-Large</option>
                 <option value="5">XX-Large</option>
-                <option value="segmental Heterochromia">Segmental Heterochromia</option>
               </Form.Select>
               </FloatingLabel>
 

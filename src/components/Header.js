@@ -8,7 +8,9 @@ function Header() {
         <Navbar className="footer" bg="#F6F2E5" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
+                    <a href="/">
                     <Image className="logoimg" src={logo} rounded />
+                    </a>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

@@ -52,6 +52,12 @@ export default class LostForm extends Component {
         })
     }
 
+    updateDateLost = (date) => {
+        this.setState({
+            date_lost: date
+        })
+    }
+
     render() {
 
         const { step } = this.state;
@@ -102,6 +108,7 @@ export default class LostForm extends Component {
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
                         values={ values }
+                        updateDateLost = { this.updateDateLost }
                     />
                 )
             case 6:

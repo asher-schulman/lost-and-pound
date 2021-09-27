@@ -46,7 +46,11 @@ export default class LostForm extends Component {
             [input]: e.target.value
         })
     }
-
+    updateImageLink = (link) => {
+        this.setState({
+            picture_url: link
+        })
+    }
 
     render() {
 
@@ -87,6 +91,7 @@ export default class LostForm extends Component {
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
                         values={ values }
+                        updateImageLink = {this.updateImageLink}
                     />
                 )
 

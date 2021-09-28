@@ -47,7 +47,7 @@ function Footer() {
                         UX Designers
                     </ul>
                     <li>Andrea Murray
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/andreakmurray/">
                     <LogoLinkedin
                       color={'#00000'}
                       title="LinkedIn"

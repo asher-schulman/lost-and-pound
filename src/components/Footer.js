@@ -35,8 +35,7 @@ function Footer() {
                       color={'#00000'}
                       title="Github"
                       height="25px"
-                      width="25px"
-                    />
+                      width="25px"/>
                     </a>
                     </li>
 
@@ -52,8 +51,7 @@ function Footer() {
                       color={'#00000'}
                       title="LinkedIn"
                       height="25px"
-                      width="25px"
-                    />
+                      width="25px"/>
                     </a>
                     </li>
                     <li>Sara Reid
@@ -62,8 +60,7 @@ function Footer() {
                       color={'#00000'}
                       title="LinkedIn"
                       height="25px"
-                      width="25px"
-                    />
+                      width="25px"/>
                     </a>
 
                     <a href="https://www.saraeletaux.com/">
@@ -71,8 +68,7 @@ function Footer() {
                       color={'#00000'}
                       title="Portfolio"
                       height="25px"
-                      width="25px"
-                    />
+                      width="25px"/>
                     </a>
                     </li>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, NavDropdown, Nav, Container, Image} from 'react-bootstrap'
+import {Navbar, Nav, Container, Image} from 'react-bootstrap'
 import logo from "../FINAL-LOGO.png"
 
 

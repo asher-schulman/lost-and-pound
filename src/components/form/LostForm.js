@@ -25,7 +25,6 @@ export default class LostForm extends Component {
         age: '',
         other_info: '',
         date_lost: '',
-        time_lost: '',
         email: '',
         phone_number: '',
     }
@@ -61,8 +60,8 @@ export default class LostForm extends Component {
     render() {
 
         const { step } = this.state;
-        const { pet_type, pet_name, picture_url, zip_code, coat_color, eye_color, sex, pet_size, age, other_info, date_lost, time_lost, email, phone_number } = this.state
-        const values = { pet_type, pet_name, picture_url, zip_code, coat_color, eye_color, sex, pet_size, age, other_info, date_lost, time_lost, email, phone_number }
+        const { pet_type, pet_name, picture_url, zip_code, coat_color, eye_color, sex, pet_size, age, other_info, date_lost, email, phone_number } = this.state
+        const values = { pet_type, pet_name, picture_url, zip_code, coat_color, eye_color, sex, pet_size, age, other_info, date_lost, email, phone_number }
 
         switch(step) {
             case 1:
@@ -143,6 +142,7 @@ export default class LostForm extends Component {
                     <PetCard/>
                     </>
                 )
+            default:
         }
 
         return (

@@ -1,28 +1,27 @@
-import {React, useState} from 'react'
-import {Container, Button} from 'react-bootstrap'
+import {React} from 'react'
+import {Container, Button, FormLabel, Form} from 'react-bootstrap'
 
 const LostWhenWhere = ({nextStep, prevStep, handleChange, values}) => {
-    const [startDate, setStartDate] = useState(new Date());
 
-    const show = (event) => {
-        return event
-    }
-    const someFunction = (date) => {
-        setStartDate(date)
-        handleChange('date_lost')
-    }
 
     return (
         <>
         <Container>
-            <h1>Lost Date and Time</h1>
-            <p>What day was {values.pet_name} lost?</p>
+            <h1>When/Where</h1>
 
 
+            <Form>
+            <Form.Group className="mb-3">
+                <FormLabel>When was {values.pet_name} lost?</FormLabel>
+                <Form.Control onChange={handleChange('date_lost')} id="lost-date" type="datetime-local" name="lost-date"/>
+            </Form.Group>
 
-            <label for="party">Enter a date and time for your party booking:</label>
-            <input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30"/>
-
+            <Form.Group className="mb-3">
+                <FormLabel>ZIP code where {values.sex === "M" ? <span> he</span> : <span>she</span>} was last seen?</FormLabel>
+                <Form.Control onChange={handleChange('zip_code')}
+                id="zip_code" type="type" name="zip_code"/>
+            </Form.Group>
+            </Form>
 
             <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
             <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>

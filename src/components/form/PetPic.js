@@ -18,6 +18,7 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
         .then(resp => resp.json())
         .then(data => {
         setUrl(data.url)
+        alert('Successfully uploaded!')
         })
         .catch(err => console.log(err))
 
@@ -36,14 +37,14 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
     return (
         <>
             <h1>Please upload a clear photo of your {values.pet_type} {values.pet_name}</h1>
-
-            <Form>
-            <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
-            <Button type="submit" value={url} onClick={uploadImage}>Upload</Button>
-            </Form>
-            <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
-            <Button className='m-2' variant="outline-dark" size="sm" onClick={changeState}>Next</Button>
-
+            <Container>
+                <Form>
+                <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
+                <Button type="submit" value={url} onClick={uploadImage}>Upload</Button>
+                </Form>
+                <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
+                <Button className='m-2' variant="outline-dark" size="sm" onClick={changeState}>Next</Button>
+            </Container>
 
         </>
     )

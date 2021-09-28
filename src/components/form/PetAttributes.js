@@ -32,8 +32,8 @@ const PetAttributes = ({nextStep, prevStep, handleChange, values}) => {
                 <option value="blue">Blue</option>
                 <option value="hazel">Hazel</option>
                 <option value="green">Green</option>
-                <option value="complete Heterochromia">Complete Heterochromia</option>
-                <option value="segmental Heterochromia">Segmental Heterochromia</option>
+                <option value="complete heterochromia">Complete Heterochromia</option>
+                <option value="segmental heterochromia">Segmental Heterochromia</option>
               </Form.Select>
               </FloatingLabel>
 

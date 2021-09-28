@@ -15,15 +15,21 @@ const LostWhenWhere = ({nextStep, prevStep, handleChange, values}) => {
     }
 
     return (
+        <>
         <Container>
             <h1>Lost Date and Time</h1>
             <p>What day was {values.pet_name} lost?</p>
 
-            <DatePicker selected={startDate} value={startDate} onSelect={show} onChange={(date) => someFunction(date)} />
+
+
+            <label for="party">Enter a date and time for your party booking:</label>
+            <input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30"/>
+
 
             <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
             <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>
         </Container>
+        </>
     )
 }
 

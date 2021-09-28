@@ -5,7 +5,8 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
 
     const [image, setImage ] = useState("");
     const [ url, setUrl ] = useState("");
-    const uploadImage = () => {
+    const uploadImage = (event) => {
+        event.preventDefault();
         const data = new FormData()
         data.append("file", image)
         data.append("upload_preset", process.env.REACT_APP_PRESET_NAME)
@@ -17,16 +18,16 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
         .then(resp => resp.json())
         .then(data => {
         setUrl(data.url)
-
         })
         .catch(err => console.log(err))
 
-        updateImageLink(url)
 
         }
 
-
-
+        const changeState = () => {
+            nextStep();
+            updateImageLink(url);
+        }
 
 
 
@@ -36,12 +37,14 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
         <>
             <h1>Please upload a clear photo of your {values.pet_type} {values.pet_name}</h1>
 
+            <form>
             <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
-            <button value={url} onClick={uploadImage}>Upload</button>
+            <button type="submit" value={url} onClick={uploadImage}>Upload</button>
+            </form>
             <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
-            <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>
+            <Button className='m-2' variant="outline-dark" size="sm" onClick={changeState}>Next</Button>
 
-            <img src={url}/>
+            
         </>
     )
 }

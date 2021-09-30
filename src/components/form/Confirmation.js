@@ -2,6 +2,8 @@ import React from 'react'
 import {Container, Button} from 'react-bootstrap'
 
 const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
+    const date = new Date(values.date_lost)
+    let dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
     return (
         <Container>
             <h1>Please insure the information below is correct</h1>
@@ -17,8 +19,7 @@ const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
                 <li> Size {values.pet_size} </li>
                 <li> Age: {values.age} </li>
                 <li> Misc: {values.other_info} </li>
-                <li> Date Lost: {values.date_lost} </li>
-                <li> Time Lost: {values.time_lost} </li>
+                <li> Date Lost: {dateString} </li>
                 <li> Contact Email:  {values.email} </li>
                 <li> Contact Phone Number: {values.phone_number} </li>
 

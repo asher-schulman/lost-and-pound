@@ -5,6 +5,8 @@ const Success = ({nextStep, prevStep, handleChange, values, renderFalse}) => {
     // const postToAPI = () => {
     //     renderFalse();
     // }
+    const date = new Date(values.date_lost)
+    let dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
 
     return (
         <div>

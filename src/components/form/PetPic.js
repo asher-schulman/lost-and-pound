@@ -5,6 +5,7 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
 
     const [image, setImage ] = useState("");
     const [ url, setUrl ] = useState("");
+
     const uploadImage = (event) => {
         event.preventDefault();
         const data = new FormData()
@@ -42,8 +43,10 @@ const PetPic = ({nextStep, prevStep, handleChange, values, updateImageLink}) => 
                 <input type="file" onChange= {(e)=> setImage(e.target.files[0])}></input>
                 <Button type="submit" value={url} onClick={uploadImage}>Upload</Button>
                 </Form>
+
                 <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
                 <Button className='m-2' variant="outline-dark" size="sm" onClick={changeState}>Next</Button>
+
             </Container>
 
         </>

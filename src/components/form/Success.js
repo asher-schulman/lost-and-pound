@@ -1,6 +1,7 @@
 import {React, useState} from 'react'
 import {Button} from 'react-bootstrap'
 const Success = ({nextStep, prevStep, handleChange, values, renderFalse}) => {
+<<<<<<< HEAD
 
     const dogSizes = {
         0: "X-Small",
@@ -53,6 +54,14 @@ const Success = ({nextStep, prevStep, handleChange, values, renderFalse}) => {
     //
     // values.date_lost.toString();
     // setDateString()
+=======
+    // <img src="https://i.imgur.com/yQLDyiR.jpg"></img>
+    // const postToAPI = () => {
+    //     renderFalse();
+    // }
+    const date = new Date(values.date_lost)
+    let dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
+>>>>>>> 620ca467458d5f540f11732d2dc5b139221bf614
 
     return (
         <div>

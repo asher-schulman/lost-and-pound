@@ -9,7 +9,6 @@ import Confirmation from './Confirmation'
 import Success from './Success'
 import SearchBar from '../SearchBar'
 import PetCard from '../PetCard'
-
 export default class LostForm extends Component {
 
     state = {
@@ -56,6 +55,10 @@ export default class LostForm extends Component {
             date_lost: date
         })
     }
+
+
+
+
 
     render() {
 

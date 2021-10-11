@@ -1,9 +1,35 @@
 import React from 'react'
 import {Container, Button} from 'react-bootstrap'
-
+import axios from 'axios'
 const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
     const date = new Date(values.date_lost)
     let dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
+
+    const postToAPI = () => {
+        let postData = {
+            pet_type: values.pet_type,
+            pet_name: values.pet_name,
+            zip_code: parseInt(values.zip_code),
+            coat_color: values.coat_color,
+            eye_color: values.eye_color,
+            sex: values.sex,
+            misc: values.other_info,
+            picture_url: values.picture_url,
+            date_lost: values.date_lost,
+            pet_size: values.pet_size,
+            age: parseInt(values.age),
+            phone_number: values.phone_number,
+            email: values.email
+        }
+        axios.post('https://lostandpoundapi.herokuapp.com/posts', postData).then((response) => {
+            console.log(response);
+            alert('')
+        }).catch((error) => {
+            console.log(error);
+        })
+        console.log(postData);
+    }
+
     return (
         <Container>
             <h1>Please insure the information below is correct</h1>
@@ -24,6 +50,7 @@ const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
                 <li> Contact Phone Number: {values.phone_number} </li>
 
             </ul>
+            <Button onClick={postToAPI}>Show data</Button>
             <Button className='m-2' variant="outline-dark" size="sm" onClick={prevStep}>Previous</Button>
             <Button className='m-2' variant="outline-dark" size="sm" onClick={nextStep}>Next</Button>
         </Container>

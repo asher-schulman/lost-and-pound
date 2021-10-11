@@ -1,7 +1,6 @@
 import {React, useState} from 'react'
 import {Button} from 'react-bootstrap'
 const Success = ({nextStep, prevStep, handleChange, values, renderFalse}) => {
-<<<<<<< HEAD
 
     const dogSizes = {
         0: "X-Small",
@@ -54,21 +53,19 @@ const Success = ({nextStep, prevStep, handleChange, values, renderFalse}) => {
     //
     // values.date_lost.toString();
     // setDateString()
-=======
     // <img src="https://i.imgur.com/yQLDyiR.jpg"></img>
     // const postToAPI = () => {
     //     renderFalse();
     // }
     const date = new Date(values.date_lost)
     let dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
->>>>>>> 620ca467458d5f540f11732d2dc5b139221bf614
 
     return (
         <div>
             <p>Your listing is published! We hope your pet is home soon.
             </p>
             <p>Take a screenshot of your listing to easily share on social media.</p>
-            <p>{values.pet_name} is a {petInfo.size} {values.sex === "M" ? <span>male</span> : <span> female </span> } {petInfo.age === "Puppy" || "Kitten" ? <span> {petInfo.age} </span> : <span>{petInfo.age} {values.pet_type}</span>}. {values.sex === "M" ? <span> He </span> : <span> She </span>} was lost at around 
+            <p>{values.pet_name} is a {petInfo.size} {values.sex === "M" ? <span>male</span> : <span> female </span> } {petInfo.age === "Puppy" || "Kitten" ? <span> {petInfo.age} </span> : <span>{petInfo.age} {values.pet_type}</span>}. {values.sex === "M" ? <span> He </span> : <span> She </span>} was lost at around
             </p>
             <Button onClick={nextStep}>See Listings</Button>
         </div>

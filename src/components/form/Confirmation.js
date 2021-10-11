@@ -5,6 +5,52 @@ const Confirmation = ({nextStep, prevStep, handleChange, values}) => {
     const date = new Date(values.date_lost)
     let dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
 
+    const dogSizes = {
+        0: "X-Small",
+        1: "small",
+        2: "medium",
+        3: "large",
+        4: "X-Large",
+        5: "XX-Large"
+    }
+
+    const catSizes = {
+        0: "very Thin",
+        1: "thin",
+        2: "ideal",
+        3: "overweight",
+        4: "obese"
+    }
+
+    const dogAges = {
+        0: "puppy",
+        1: "adult",
+        2: "senior"
+    }
+
+    const catAges = {
+        0: "kitten",
+        1: "adult",
+        2: "senior"
+    }
+
+
+    let petInfo= {
+        age: '',
+        size: ''
+    }
+
+
+    if (values["pet_type"] === "dog") {
+        petInfo["age"] = dogAges[parseInt(values["age"])]
+        petInfo["size"] = dogSizes[parseInt(values["pet_size"])]
+    } else if (values["pet_type"] === "cat"){
+        petInfo["age"] = catAges[parseInt(values["age"])]
+        petInfo["size"] = catSizes[parseInt(values["pet_size"])]
+    } else {
+
+    }
+    
     const postToAPI = () => {
         let postData = {
             pet_type: values.pet_type,

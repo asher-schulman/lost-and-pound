@@ -1,3 +1,5 @@
+*DEPRECATED - the backend and postgresql database this frontend app pulled from is no longer supported under Heroku's free plan and will not be migrated to another application. This source code is reflective of my portion of the September 2021 General Assembly Alumni 3-Day Hackathon.*
+
 # Getting Started with Create React App
 
 
